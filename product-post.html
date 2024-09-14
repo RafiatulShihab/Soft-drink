@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRĒZ | Alcohol Alternative Drinks</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+    <link rel="stylesheet" href="assets/css/meanmenu.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <style>
+        /* Ensure all product cards are the same height */
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s ease;
+        }
+        .card:hover{
+            border: 1px solid #80932f;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+        }
+
+        /* Zoom effect on hover */
+        .card-img-box{
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+        @media only screen and (max-width: 1400px) {
+            .card-img-box{
+                height: 300px;
+            }
+        }
+        .card-img-top {
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-top {
+            transform: scale(1.1); /* Zoom effect */
+        }
+
+        /* Force equal height for card content */
+        .card-body {
+            flex-grow: 1;
+        }
+
+        /* Ensure the images are contained and fit in the card properly */
+        .card-img-top {
+            height: 100%;
+            width: 100%;
+            cursor: pointer; /* Add cursor pointer to show it's clickable */
+        }
+
+        /* Style for the button to stick at the bottom of the card */
+        .card-btn {
+            font-size: 16px;
+            border: 2px solid #80932f;
+            background: transparent;
+            color: #000;
+            text-align: center;
+            padding: 10px 21px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-left: 18px;
+        }
+        .card-btn:hover{
+            background: #80932f; 
+            border: 2px solid #80932f;
+            color: #fff;
+        }
+
+
+        .card-titles {
+            font-size: 22px;
+        }
+        .price-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            display: inline-block;
+        }
+        .price-through {
+            margin-left: 10px;
+            text-decoration: line-through;
+            color: #888181;
+        }
+        .card-text-detls {
+            font-size: 15px;
+            color: #333;
+        }
+
+        /* Modal image styling */
+        .modal-img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+     <!--------------- header-section-start-start ---------------->
+     <div class="top-bar">
+        <div class="cstm-container">
+            <a href="#" class="announcement-bar">
+                <span>SAVE 25% WITH SUBSCRIPTION <i class="fal fa-long-arrow-right"></i></span>
+            </a>
+        </div>
+    </div>
+    <header class="menu-section">
+        <div class="menu-area">
+            <div class="main-menu">
+                <span class="header-icon tp-menu-toggle d-lg-none">
+                    <i class="far fa-bars"></i>
+                 </span>
+                <nav id="mobile-menu">
+                   <ul>
+                        <li class="has-dropdown"><a href="index.html">Shop</a>
+                            <ul class="submenu">
+                                <li><a href="#">Shop-1</a></li>
+                                <li><a href="#">Shop-2</a></li>
+                                <li><a href="#">Shop-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html">Contact</a></li>
+                   </ul>
+                </nav>
+            </div>
+            <div class="logo">
+                <a href="#"><img src="assets/img/logo.svg" alt=""></a>
+            </div>
+            <div class="header__icon">
+                <ul>
+                    <li><a href="#"><i class="fal fa-user"></i></a></li>
+                    <li><a href="#"><i class="fal fa-shopping-bag"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- sidebar -->
+    <div class="tp-sidebar-menu">
+        <button class="close-sidebar"><i class="fal fa-times"></i></button>
+        <div class="logo mobile-logo mb-4 pb-3">
+           <a href="index.html"><img src="assets/img/logo.svg" alt=""></a>
+        </div>
+        <div class="mobile-menu mt-30"></div>
+    </div>
+    <div class="body-overlay"></div>
+
+
+    <!--------------- header-section-start-end ---------------->
+    <!-- Product Display Section -->
+    <div class="container mt-5 pt-5" >
+        <div class="row g-4 pb-5">
+
+            <!-- Product Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_91__2.png?v=1718747583&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Double dose of relaxation and clarity <br>
+                            - 5mg THC, 10mg CBD <br>
+                            - Italian lemon and Elderflower 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_82_1.png?v=1718757257&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_91__2.png?v=1718747583&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_82_1.png?v=1718757257&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_91__2.png?v=1718747583&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card pb-5">
+                    <div class="card-img-box">
+                        <img src="https://www.drinkbrez.com/cdn/shop/files/Rectangle_82_1.png?v=1718757257&width=493" class="card-img-top" alt="Lemon Elderflower" data-bs-toggle="modal" data-bs-target="#imageModal" data-image="https://www.drinkbrez.com/cdn/shop/files/Double.jpg?v=1718944914&width=493">
+                    </div>
+                    <div class="card-body pt-4">
+                        <h5 class="card-titles">Lemon Elderflower 7.5oz</h5>
+                        <span class="price-title pt-2">$112.50</span>
+                        <span class="price-through">$112.50</span>
+                        <p class="card-text-detls pt-3">
+                            - Perfect for sharing or enjoying solo <br>
+                            - 3x dose of THC and CBD <br>   
+                            - Refreshing and sparkling with lemon 
+                        </p>
+                    </div>
+                    <div class="purches-btn">
+                        <a href="./Products.html" class="card-btn">BUY NOW</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="" class="modal-img" alt="Full Image">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    	<!------------ Java script file start ------------>
+        <script src="assets/js/jquery-3.7.1.min.js" type="text/javascript"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/meanmenu.js"></script>
+        <script src="assets/js/slick.js" type="text/javascript" charset="utf-8"></script>
+        <script src="assets/js/main.js"></script>
+    <script>
+        // JavaScript to handle image modal display
+        document.addEventListener('DOMContentLoaded', function () {
+            var imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+            var modalImage = document.querySelector('.modal-img');
+    
+            document.querySelectorAll('.card-img-top').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    var imageUrl = img.src; // Use the image's src directly
+                    modalImage.src = imageUrl; // Set the modal image's src to the clicked image's src
+                    imageModal.show();
+                });
+            });
+        });
+    </script>
+    
+</body>
+</html>

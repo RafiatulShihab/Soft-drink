@@ -1,0 +1,155 @@
+@media only screen and (max-width: 1080px) {
+    .banner-content h2 {
+        font-size: 60px;
+    }
+    .banner-content p {
+        font-size: 16px;
+    }
+    .drinking-has-content h2 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    .drinking-has-content p {
+        font-size: 18px;
+        width: 452px;
+        margin: 26px 0;
+    }
+    .drinking-has-area {
+        padding: 0;
+    }
+    .choosing-title h2 {
+        font-size: 50px;
+        margin: 10px 0 50px;
+    }
+    .choosing-area {
+        padding: 20px 0 0;
+    }
+    .what-people h1 {
+        font-size: 50px;
+        margin: 20px 0;
+    }
+    .spectrum-card h2 {
+        font-size: 34px;
+        margin-bottom: 30px;
+    }
+    .spectrum-card p {
+        font-size: 16px;
+    }
+    .full-spectrum a {
+        font-size: 18px;
+        margin: 0 0 45px;
+    }
+    .save-5 h2 {
+        font-size: 20px;
+    }
+    .footer-submit-btn a > span {
+        font-size: 18px;
+    }
+    .footer-submit-btn a > i {
+        top: 35%;
+        right: 20px;
+        font-size: 21px;
+    }
+    .footer-link h2 {
+        font-size: 17px;
+    }
+    .footer-link a {
+        padding: 4px 0;
+    }
+    .accordion-title::before {
+        right: 0;
+    }
+    .accordion-title::after {
+        right: 0;
+    }
+    .accordion-title {
+        font-size: 17px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .drinking-has-content {
+        text-align: center;
+    }
+    .drinking-has-content p {
+        width: 100%;
+        margin: 26px 0;
+        font-size: 16px;
+    }
+    .drinking-video {
+        text-align: center;
+    }
+    .drinking-video video {
+        height: auto;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .faq-area {
+        margin-top: 60px;
+    }
+    .choosing-title h2 {
+        font-size: 32px;
+        margin: 0 0 50px;
+    }
+    .pure-slider-wrapper {
+        padding-top: 0px;
+    }
+    .spectrum-card {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .spectrum-card h2 {
+        font-size: 32px;
+    }
+    .what-people {
+        padding: 0;
+    }
+    .spectrum-card img {
+        width: 100%;
+    }
+    .what-people h1 {
+        font-size: 32px;
+    }
+    .drinking-has-content h2 {
+        font-size: 32px;    
+    }
+
+    .logo a img {
+        width: 90px;
+    }
+    .order_2{
+        order: 2;
+    }
+    .order_1{
+        order: 1;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+   
+    .banner-content h2 {
+        font-size: 27px;
+    }
+
+    .banner-content p {
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 13px;
+    }
+    .banner-content {
+        padding-top: 80px;
+        text-align: left !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .banner-btn {
+        top: 18%;
+        left: 15px;
+        transform: none;
+    }
+    .banner-btn a {
+        padding: 4px 15px 6px 36px;
+        font-size: 15px;    
+        margin-bottom: 61px;
+    } 
+
+}

@@ -1,0 +1,743 @@
+@font-face {
+    font-family: 'ppEido Medium';
+    src: url(../fonts/ppEiko/PPEiko-Medium.otf);
+}
+@font-face {
+    font-family: 'ppEido Thin';
+    src: url(../fonts/ppEiko/PPEiko-Thin.otf);
+}
+@font-face {
+    font-family: 'PPFragment SansRegular';
+    src: url(../fonts/ppFragment/PPFragment-SansRegular.otf);
+}
+@font-face {
+    font-family: 'PPFragment SansLight';
+    src: url(../fonts/ppFragment/PPFragment-SansLight.otf);
+}
+
+:root {
+    --black: #000000;
+    --white: #ffffff;
+  }
+body{
+    margin: 0; 
+    padding: 0; 
+    font-family: 'PPFragment SansLight';
+    font-size: 16px;
+}
+a,
+.btn,
+button,
+span,
+p,
+i,
+input,
+select,
+textarea,
+li,
+img,
+svg path,
+*::after,
+*::before,
+.transition-3,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+ul{
+    list-style: none;
+    padding: 0 !important;
+    margin: 0;
+}
+ul li{
+    list-style: none;
+    padding: 0 !important;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h4{
+    font-family: 'ppEido Medium';
+    color: var(--black);
+}
+p, span, a{
+    font-family: 'PPFragment SansLight';
+    color: var(--black);
+    text-decoration: none;
+    font-size: 16px;
+    color: var(--black);
+}
+a:hover{
+    color: #242424e4;
+}
+
+.fix{
+    overflow: hidden;
+}
+
+.cstm-container{
+    max-width: 1320px;
+	margin: 0 auto;
+	padding: 10px;
+	width: 95%; 
+}
+
+
+.header-sticky{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: red;
+}
+
+/* ================== 
+Header Css 
+================ */
+.announcement-bar{
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+    text-align: center;
+}
+.announcement-bar:hover span{
+    color: var(--black);
+}
+.announcement-bar span i{
+    transition: 0.3s;
+}
+.announcement-bar:hover span i{
+    font-size: 14px;
+}
+.announcement-bar span{
+    font-size: 10px;
+    margin-right: 10px;
+    letter-spacing: 1px;
+}
+
+.menu-section{
+    padding-bottom: 18px;
+    padding-top: 10px;
+    background: transparent;
+    z-index: 999;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+}
+
+/* header-sticky */
+header{
+    transition: 0.2s;
+}
+header.sticky{
+    background: var(--white);
+    top: 0;
+    box-shadow: 0 2px 6px 2px #e6e6e6;
+}
+
+.menu-area{
+    max-width: 1320px;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-menu ul li {
+	display: inline-block;
+    position: relative;
+}
+.main-menu ul li a {
+	display: inline-block;
+	padding: 10px 15px 15px;
+    font-size: 18px;
+}
+.main-menu ul li a i{
+    font-size: 14px;
+}
+
+.header__icon ul li {
+	display: inline-block;
+}
+.header__icon ul li a{
+    display: inline-block;
+    padding: 10px;
+    font-size: 20px;
+}
+
+/* submenu */
+.main-menu ul .has-dropdown::after {
+    content: "\f054";
+    font-family: 'Font Awesome 5 Pro';
+    color: var(--tp-common-white);
+    font-size: 10px;
+    position: absolute;
+    right: 0px;
+    top: 46%;
+    transform: translateY(-50%);
+}
+.main-menu ul li .submenu {
+	width: 250px;
+	background: var(--white);
+	border: 1px solid #cacaca;
+	border-radius: 0 0 3px 3px;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	visibility: hidden;
+	opacity: 0;
+	transform-origin: top;
+	transform: scaleY(0);
+	transition: 0.4s;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.main-menu ul li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1)
+}
+.main-menu ul li .submenu li {
+	display: block;
+	margin: 0;
+	padding: 9px 20px;
+}
+
+.tp-sidebar-menu {
+	position: fixed;
+	left: -100%;
+	top: 0;
+	width: 320px;
+	height: 100%;
+	background: #ffffff none repeat scroll 0 0;
+	-webkit-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	box-shadow: -5px 0 20px -5px rgba(0, 0, 0, 0.5);
+	-webkit-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	-moz-transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+	z-index: 9999;
+	padding: 30px;
+	min-width: 300px;
+	overflow-y: scroll;
+}
+.sidebar-opened {
+	left: 0;
+}
+.close-sidebar {
+	font-size: 18px;
+	height: 30px;
+	width: 30px;
+    line-height: 26px;
+	border: 1px solid #ddd;
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	color: var(--tp-common-black);
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+}
+.close-sidebar:hover {
+	background: var(--black);
+	border: 1px solid var(--black);
+	color: var(--white);
+}
+.body-overlay {
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 99;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: all 0.3s ease-out 0s;
+	-moz-transition: all 0.3s ease-out 0s;
+	-ms-transition: all 0.3s ease-out 0s;
+	-o-transition: all 0.3s ease-out 0s;
+	transition: all 0.3s ease-out 0s;
+    cursor: pointer;
+}
+.opened {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+/*----------------------------------------*/
+/*  03. MEAN MENU CSS START
+/*----------------------------------------*/
+/* mean menu customize */
+.mean-container a.meanmenu-reveal {
+    display: none;
+}
+  
+.mean-container .mean-nav {
+    background: none;
+    margin-top: 0;
+}
+  
+.mean-container .mean-bar {
+    padding: 0;
+    min-height: auto;
+    background: none;
+}
+  
+.mean-container .mean-nav > ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    display: block !important;
+}
+  
+.mean-container a.meanmenu-reveal {
+    display: none !important;
+}
+  
+.mean-container .mean-nav ul li a {
+    width: 100%;
+    padding: 10px 0;
+    color: var(--clr-common-black);
+    border-top: 1px solid #ebebeb;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.mean-container .mean-nav ul li a:hover {
+    color: var(--clr-theme-1);
+}
+  
+.mean-container .mean-nav ul li a.mean-expand {
+    margin-top: 5px;
+    padding: 0 !important;
+    line-height: 14px;
+    border: 1px solid #ebebeb !important;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    color: var(--clr-common-black);
+    line-height: 30px;
+    top: 0;
+    font-weight: 400;
+}
+.mean-container .mean-nav ul li a.mean-expand:hover {
+    background: var(--clr-theme-1);
+    color: var(--clr-common-white);
+    border-color: var(--clr-theme-1);
+}
+
+.mean-container .mean-nav ul li > a > i {
+    display: none;
+}
+  
+.mean-container .mean-nav ul li > a.mean-expand i {
+    display: inline-block;
+}
+  
+.mean-container .mean-nav > ul > li:first-child > a {
+    border-top: 0;
+}
+  
+.mean-container .mean-nav ul li a.mean-expand.mean-clicked {
+    color: var(--clr-common-black);
+}
+  
+.mean-container .mean-nav ul li a.mean-expand.mean-clicked i {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    color: var(--clr-common-black);
+}
+
+
+/* ===================
+ banner-section css start 
+ ==================*/
+.banner-section{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;    
+}
+.banner-section::after{
+    content: '';
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 68%); 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+}
+.banner-section video {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.banner-content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    padding-top: 120px;
+}
+.banner-content h2{
+    font-size: 90px;
+    color: var(--black); 
+}
+.banner-content p {
+    font-size: 18px;
+    line-height: 3;
+}
+.banner-btn {
+	position: absolute;
+	bottom: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+    z-index: 22;
+}
+.banner-btn a {
+	display: inline-block;
+	background: var(--white);
+	padding: 10px 15px 10px 36px;
+	border-radius: 30px;
+	font-size: 20px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 2;
+}
+.banner-btn a i{
+    font-size: 20px;
+    color: var(--black);
+    background: #e3f98a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    margin-left: 10px;
+}
+
+
+/* ===================
+ drinking-has-area section CSS start
+ =====================*/
+.drinking-has-area{
+    padding: 50px 0;
+}
+
+.drinking-has-content h2 {
+	font-size: 90px;
+	margin-bottom: 20px; 
+    line-height: 1;   
+    color: var(--black);
+}
+.drinking-has-content p {
+	font-size: 26px;
+	line-height: 1.2;
+	width: 501px;
+    margin: 36px 0;
+    color: var(--black);
+}
+.drinking-has-content img {
+	width: 100%;
+}
+
+/* ===================
+ FAQ section CSS start
+ =====================*/
+ .faq-section{
+    margin-top: -100px;
+ }
+ .faq-item{
+    border: 1px solid #666;
+    padding: 15px 30px;
+    border-radius: 30px;
+ }
+ .accordion-title {
+	position: relative;
+	margin: 0;
+	background: var(--white);
+	font-size: 20px;
+	color: var(--black);
+	cursor: pointer;
+    font-family: 'PPFragment SansRegular';
+}
+.accordion-title::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 25px;
+	width: 15px;
+	height: 2px;
+	transform: rotate(90deg);
+	background: var(--black);
+	transition: all 0.3s ease-in-out;
+}
+.accordion-title::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	right: 25px;
+	width: 15px;
+	height: 2px;
+	background: var(--black);
+	transition: all 0.2s ease-in-out;
+}
+.accordion-content p {
+	font-size: 16px;
+	color: var(--black);
+	line-height: 1.5;
+	margin-top: 20px;
+}
+
+.open::before {
+	transform: rotate(180deg);
+}
+.open::after {
+	opacity: 0;
+}
+
+/* ===================
+ choosing section CSS start
+ =====================*/
+
+ .choosing-title h2 {
+	font-size: 90px;
+    color: var(--black); 
+    margin: 20px 0 50px;
+}
+
+.choosing-area{
+    padding: 70px 0 0;
+}
+.choosing-card a img{
+    width: 100%;
+}
+.choosing-card .choosing-card-title{
+    font-size: 24px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.choosing-card .choosing-card-title i{
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+/* ===================
+ what-people section CSS start
+ =====================*/
+
+.what-people{
+    padding: 40px 0;
+}
+.what-people h1{
+    font-size: 90px;
+    text-align: center;
+    margin: 50px 0;
+    color: var(--black);
+}
+.what-people video{
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+.what-people .what-people-video{
+    position: relative;
+}
+.what-people .what-people-video .what-people-para {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 15px;
+    text-align: center;
+    z-index: 2;
+    transform: translate(-50%,-50%);
+}
+.what-people-btn{
+    text-align: center;
+}
+.what-people-btn a {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 15px 10px 36px;
+    background-color: #e3f98a;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 15px 0;
+    text-align: center;
+}
+.what-people-btn a i{
+    vertical-align: middle;
+    font-size: 25px;
+    margin-left: 10px;
+}
+ 
+ 
+ /* ===================
+  what-people section CSS end
+  =====================*/
+
+
+
+/* ===================
+ pure slider section CSS start
+ =====================*/
+ .pure-fun-slider-section{
+    padding: 30px 0;
+ }
+.pure-slider-wrapper{
+    padding-top: 50px;
+}
+
+.pure-slider-wrapper .slider-item .slider-img{
+    width: 100%;
+}
+.slider-activee .slick-slide{
+	padding: 0 10px;
+}
+
+/* ===================
+ Full-spectrum section CSS start
+ =====================*/
+
+.full-spectrum img{ 
+    padding: 0;
+    margin: 0;
+    width: 356px;
+}
+
+.full-spectrum a {
+    text-align: center;
+	display: inline-block;
+	padding: 10px 15px 10px 36px;
+    background-color: #e3f98a;
+	border-radius: 30px;
+	font-size: 20px;
+    margin: 80px 0;
+}
+.full-spectrum a i{
+    vertical-align: middle;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.spectrum-card {
+	width: 80%;
+	margin: 0 auto;
+}
+.spectrum-card h2{
+    font-size: 46px;
+    color: var(--black);
+    margin-bottom: 40px;
+}
+.spectrum-card p{
+    font-size: 18px;
+    color: var(--black);
+    padding-right: 15px;
+}
+/* ===================
+ Full-spectrum section CSS end
+ =====================*/
+
+
+ /* ===================
+ fotter section CSS start
+ =====================*/
+.footer-section{
+    padding: 50px 5px;
+    /* background-color: #F3F5F2; */
+    background: url('https://www.drinkbrez.com/cdn/shop/files/Rectangle_1.svg?v=1717401091');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+ }
+.save-5 h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.save-5 .footer-btn {
+    position: relative;
+}
+.save-5 .footer-btn input {
+	width: 100%;
+	border: 1px solid #BFBFC0;
+	padding: 12px 10px;
+	border-radius: 30px;
+	font-size: 18px;
+    margin-bottom: 10px;
+}
+.save-5 .footer-btn input:focus {
+    outline: 1.5px solid #9b9b9e;
+}
+.save-5 .footer-btn button {
+	position: absolute;
+	right: 2%;
+	top: 14%;
+	background-color: #e3f98a;
+	padding: 5px 10px;
+	font-size: 17px;
+	border: 0px;
+	border-radius: 30px;
+}
+.footer-submit-btn{
+    text-align: left;
+}
+.footer-submit-btn a {
+    position: relative;
+	font-size: 20px;
+	text-align: left;
+	border: 1px solid #BFBFC0;
+	padding: 10px 110px 10px 30px;
+	display: block;
+	border-radius: 60px;
+}
+.footer-submit-btn a>span{
+    font-size: 25px;
+    color: var(--black);
+    text-align: center;
+}
+.footer-submit-btn a > i {
+	position: absolute;
+	top: 30%;
+	right: 15px;
+	font-size: 26px;
+}
+.footer-link h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.footer-link a{
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    padding: 5px 0;
+    letter-spacing: 1px;
+}
+.footer-nav {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2px; 
+}
+
+
+
+
+
